@@ -10,8 +10,7 @@ Base = declarative_base()
 
 class User(Base):
     __tablename__ = 'user'
-    # Here we define columns for the table person
-    # Notice that each column is also a normal Python instance attribute.
+
     id = Column(Integer, primary_key=True)
     name = Column(String(50), nullable=False)
     email = Column(String(50), nullable=False)
@@ -20,8 +19,7 @@ class User(Base):
 
 class Character(Base):
     __tablename__ = 'character'
-    # Here we define columns for the table address.
-    # Notice that each column is also a normal Python instance attribute.
+
     id = Column(Integer, primary_key=True)
     name = Column(String(250), nullable=False)
     hair_color = Column(String(250))
@@ -32,8 +30,7 @@ class Character(Base):
 
 class Planet(Base):
     __tablename__ = 'planet'
-    # Here we define columns for the table address.
-    # Notice that each column is also a normal Python instance attribute.
+    
     id = Column(Integer, primary_key=True)
     name = Column(String(250), nullable=False)
     gravity = Column(String(250)) 
@@ -53,6 +50,3 @@ class Favourite(Base):
 
     def to_dict(self):
         return {}
-
-## Draw from SQLAlchemy base
-render_er(Base, 'diagram.png')
