@@ -50,3 +50,5 @@ class Favourite(Base):
 
     def to_dict(self):
         return {}
+
+render_er(Base, 'diagram.png')
